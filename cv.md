@@ -27,3 +27,21 @@ I am responsible, accurate and attentive. I like to solve logic tasks and learn 
 * Preprocessor SCSS
 * Figma, Adobe Photoshop
 --------------------------------------------------------------------------
+
+## Code example:
+
+```
+function fizzBuzz(i) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');
+    } else if (i % 3 === 0) {
+        console.log('Fizz');
+    } else if (i % 5 === 0) {
+        console.log('Buzz');
+    } else {
+        console.log(i);  
+    }
+}
+
+fizzBuzz(15);
+```
