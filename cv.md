@@ -15,3 +15,15 @@ I am a beginner frontend-developer. I have been studying programming since Novem
 
 I am responsible, accurate and attentive. I like to solve logic tasks and learn new things.
 --------------------------------------------------------------------------
+
+## Skills:
+
+* HTML5
+* CSS3
+* JavaScript Basics
+* Git, GitHub
+* VS Code
+* BEM methodology
+* Preprocessor SCSS
+* Figma, Adobe Photoshop
+--------------------------------------------------------------------------
