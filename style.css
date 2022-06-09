@@ -50,6 +50,7 @@ html {
 }
 
 .nav-link::after {
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -30%;
@@ -61,7 +62,6 @@ html {
   transition: width 0.3s ease-in-out;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  content: "";
 }
 
 .nav-link:hover::after {
@@ -70,6 +70,28 @@ html {
 
 .nav-link:hover {
   color: #ffffff;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  width: calc(50% - 20px);
+  padding: 10px;
+  border-bottom: 1px solid #9d818f;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2.5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #9d818f;
 }
 
 .avatar {
@@ -85,24 +107,27 @@ html {
   align-items: center;
   width: 100%;
   padding: 50px;
+  margin-bottom: 40px;
+  border-bottom: 4px dotted #9d818f;
 }
 
 .section-profile-title {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    text-transform: uppercase;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .main-title {
   position: relative;
   margin-bottom: 20px;
   font-size: 32px;
+  line-height: 50px;
   font-weight: 300;
   letter-spacing: 5px;
-  line-height: 50px;
+  color: #000000;
 }
 
 .main-title::after {
@@ -118,7 +143,65 @@ html {
 
 .section-subtitle {
   color: #9d818f;
-  letter-spacing: 2px;
   font-weight: 300;
   line-height: 50px;
+  letter-spacing: 2px;
+}
+
+.section-list {
+  list-style: none;
+}
+
+.section-item {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 12px;
+}
+
+.section-item-span {
+  color: #9d818f;
+}
+
+.section-item-link {
+  text-decoration: none;
+  color: #9d818f;
+}
+
+.section-item:before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  top: 6px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/svg/circle.svg);
+}
+
+.contacts-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contacts-item:nth-child(1)::before {
+  background-image: url(./assets/svg/location.svg);
+}
+
+.contacts-item:nth-child(2)::before {
+  background-image: url(./assets/svg/email.svg);
+}
+
+.contacts-item:nth-child(3)::before {
+  background-image: url(./assets/svg/github.svg);
+}
+
+.contacts-item:nth-child(4)::before {
+  background-image: url(./assets/svg/telegram.svg);
 }
