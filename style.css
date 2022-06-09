@@ -84,14 +84,14 @@ html {
   border-bottom: 1px solid #9d818f;
 }
 
-.section-title {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 2.5;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #9d818f;
+.section-profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 30px;
+  border-bottom: 4px dotted #9d818f;
 }
 
 .avatar {
@@ -101,16 +101,6 @@ html {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-.section-profile {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 50px;
-  margin-bottom: 40px;
-  border-bottom: 4px dotted #9d818f;
-}
-
 .section-profile-title {
   display: flex;
   flex-direction: column;
@@ -118,6 +108,16 @@ html {
   align-content: center;
   text-align: center;
   text-transform: uppercase;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2.5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #9d818f;
 }
 
 .main-title {
@@ -142,10 +142,10 @@ html {
 }
 
 .section-subtitle {
-  color: #9d818f;
   font-weight: 300;
   line-height: 50px;
   letter-spacing: 2px;
+  color: #9d818f;
 }
 
 .section-list {
@@ -163,8 +163,8 @@ html {
 }
 
 .section-item-link {
-  text-decoration: none;
   color: #9d818f;
+  text-decoration: none;
 }
 
 .section-item:before {
@@ -183,6 +183,7 @@ html {
 .contacts-item:before {
   content: "";
   position: absolute;
+  top: 1px;
   left: 0;
   width: 24px;
   height: 24px;
