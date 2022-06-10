@@ -20,6 +20,10 @@ body {
   color: #4d2323;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -31,6 +35,7 @@ html {
 }
 
 .header {
+  min-height: 70px;
   background-color: #9d818f;
 }
 
@@ -287,6 +292,102 @@ html {
 @media (max-width: 768px) {
   .container {
     max-width: 720px;
+  }
+
+  .header__menu-icon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 20;
+    width: 30px;
+    height: 20px;
+  }
+
+  .header__menu-icon span,
+  .header__menu-icon::before,
+  .header__menu-icon::after {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .header__menu-icon::before,
+  .header__menu-icon::after {
+    content: "";
+  }
+  
+  .header__menu-icon::before {
+    top: 0;
+  }
+
+  .header__menu-icon::after {
+    bottom: 0;
+  }
+
+  .header__menu-icon span {
+    top: 47%;
+  }
+
+  .header__menu-icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .header__menu-icon._active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  .header__menu-icon._active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .header__menu-icon._active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+
+  .nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    overflow: auto;
+  }
+  
+  .nav .nav-list {
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0 0 0;
+  }
+
+  .nav-item {
+    margin-bottom: 16px;
+  }
+
+  .nav .nav-link {
+    padding: 20px;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  .nav._active {
+    left: 0;
   }
 }
 
