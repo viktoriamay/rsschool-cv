@@ -7,3 +7,13 @@ if (iconMenu) {
         menuBody.classList.toggle('_active');
     });
 }
+
+const closeMenu = document.querySelectorAll('.nav-link');
+
+for (let closeMenuLink of closeMenu) {
+    closeMenuLink.addEventListener('click', function() {
+        document.body.classList.remove('_lock');
+        iconMenu.classList.remove('_active');
+        menuBody.classList.remove('_active');
+    });
+}
